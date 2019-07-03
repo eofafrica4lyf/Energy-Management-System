@@ -11,3 +11,115 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+#root{
+  display: flex;
+  color: var(--white);
+  background: linear-gradient(to bottom left,#216e93,#21648a,#1f5881,#172d5b,#191c51);
+}
+
+#logo{
+  padding-top: 25px;
+  text-align: center;
+}
+
+nav{
+  padding-top: 1em;
+}
+
+nav ul li{
+  list-style: none;
+  font-size: 15px;
+}
+
+nav ul a{
+  text-decoration: none;
+  color: white;
+  text-align: left;
+  padding: 1em;
+  display: block;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+nav ul li{
+  position: relative;
+  /* padding-left: 25px; */
+  opacity: 0.6;
+}
+nav ul li:active{
+  opacity: 1;
+  border-right: 3px solid #83e8a2;
+}
+nav ul li:hover{
+  opacity: 1;
+}
+
+nav ul li#dashboard:before{
+  background-image: url(./img/Dashboard.svg);
+}
+nav ul li#costs:before{
+  background-image: url(./img/Cost.svg);
+}
+nav ul li#applicances:before{
+  background-image: url(./img/Appliances.svg);
+}
+nav ul li#usage_by_rooms:before{
+  background-image: url(./img/Usage_by_rooms.svg);
+}
+nav ul li#emissions:before{
+  background-image: url(./img/Emissions.svg);
+}
+nav ul li:before{
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  color: white;
+  content: "";
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  margin-top: 13px;
+  opacity: .6;
+  /* position: absolute;
+  top: -9px;
+  left: 0px; */
+}
+
+nav ul li a{
+  margin-bottom: 20px;
+}
