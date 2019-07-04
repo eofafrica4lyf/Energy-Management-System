@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 
 function Header() {
+
+  
   return (
     <div id='header' style={{display: 'flex', flexDirection: 'column', flex: '1 0 0', backgroundColor: '#181745', padding: '1em 0 1em 1em'}}>
       <aside style={{flex: '1 0 100vh'}}>
@@ -19,6 +21,7 @@ function Header() {
               <li id="emissions"><NavLink activeClassName='active' to="/emissions">Emissions</NavLink></li>
             </ul>
           </nav>
+          
           
         </div>
       </aside>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import DashboardPage from './components/Body/DashboardPage/DashboardPage';
@@ -9,20 +9,44 @@ import UsagePage from './components/Body/UsagePage/UsagePage';
 import EmissionsPage from './components/Body/EmissionsPage/EmissionsPage';
 
 function App() {
-  return (
-    <Router>
-      <React.Fragment >
-        <Header />
-        {/* <DashboardHome /> */}
-        <Route exact path='/dashboard' component={DashboardPage}/>
-        <Route path='/costs' component={CostsPage}/>
-        <Route path='/appliances' component={AppliancesPage}/>
-        <Route path='/usage' component={UsagePage}/>
-        <Route path='/emissions' component={EmissionsPage}/>
-      </React.Fragment>
-    </Router>
-    
-  );
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  
+  const handleLogout= (e) => {
+    console.log("Logout button clicked")
+    localStorage.clear();
+    setIsLoggedIn(false);
+  }
+  
+  useEffect(() => {
+    console.log("Entered useEffect")
+    localStorage.userID = 2;
+    setIsLoggedIn(true);
+
+  }, [setIsLoggedIn])
+
+  
+    return (
+      // {console.log(isLoggedIn)}
+      (!isLoggedIn) ?
+      <>
+      <p>You are not logged in.</p>
+      </>
+                      :
+      <Router>
+        <React.Fragment >
+          <Header />
+          <div id="logout" style={{float: "right", position: "absolute", right: "30px", top: "15px"}}>
+            <button onClick={handleLogout} id="logout">Logout</button> 
+          </div>
+          {/* <DashboardHome /> */}
+          <Route exact path='/dashboard' component={DashboardPage}/>
+          <Route path='/costs' component={CostsPage}/>
+          <Route path='/appliances' component={AppliancesPage}/>
+          <Route path='/usage' component={UsagePage}/>
+          <Route path='/emissions' component={EmissionsPage}/>
+        </React.Fragment>
+      </Router>
+    );
 }
 
 export default App;
