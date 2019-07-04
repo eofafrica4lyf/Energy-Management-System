@@ -8,7 +8,7 @@ import AppliancesPage from './components/dashboard/Body/AppliancesPage/Appliance
 import UsagePage from './components/dashboard/Body/UsagePage/UsagePage';
 import EmissionsPage from './components/dashboard/Body/EmissionsPage/EmissionsPage';
 import LoginPage from './components/LoginLogout/LoginPage';
-import LogoutPage from './components/LoginLogout/LogoutPage';
+import SignUpPage from './components/LoginLogout/SignUpPage';
 import LogHeader from './components/LoginLogout/LogHeader';
 
 function App() {
@@ -38,25 +38,26 @@ function App() {
           {/* <p>You are not logged in.</p> */}
           <Route exact path="/" component={LoginPage}/>
           <Route path="/login" component={LoginPage}/>
-          <Route path="/logout" component={LogoutPage}/>
+          <Route path="/signup" component={SignUpPage}/>
         </div>
       </Router>
       
       </>
                       :
       <Router>
-        <React.Fragment >
+        <div style={{display: "flex"}}>
           <DashboardHeader />
           <div id="logout" style={{float: "right", position: "absolute", right: "30px", top: "15px"}}>
             <button onClick={handleLogout} id="logout">Logout</button> 
           </div>
           {/* <DashboardHome /> */}
-          <Route exact path='/dashboard' component={DashboardPage}/>
+          <Route exact path='/' component={DashboardPage}/>
+          <Route path='/dashboard' component={DashboardPage}/>
           <Route path='/costs' component={CostsPage}/>
           <Route path='/appliances' component={AppliancesPage}/>
           <Route path='/usage' component={UsagePage}/>
           <Route path='/emissions' component={EmissionsPage}/>
-        </React.Fragment>
+        </div>
       </Router>
     );
 }
