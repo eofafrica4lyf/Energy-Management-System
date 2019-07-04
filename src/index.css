@@ -44,7 +44,7 @@ code {
 }
 
 #root{
-  display: flex;
+  /* display: flex; */
   color: var(--white);
   background: linear-gradient(to bottom left,#216e93,#21648a,#1f5881,#172d5b,#191c51);
   position: relative;
@@ -55,16 +55,23 @@ code {
   text-align: center;
 }
 
-nav{
+nav#dashboard-nav{
   padding-top: 1em;
 }
 
-nav ul li{
+nav#dashboard-nav ul li, nav#log-nav ul li{
   list-style: none;
   font-size: 15px;
 }
 
-nav ul a{
+nav#log-nav ul li a{
+  text-decoration: none;
+  color: white;
+  padding: 1em 2em;
+  display: block;
+}
+
+nav#dashboard-nav ul a{
   text-decoration: none;
   color: white;
   text-align: left;
@@ -76,34 +83,34 @@ nav ul a{
   box-sizing: border-box;
 }
 
-nav ul li{
+nav#dashboard-nav ul li{
   position: relative;
   opacity: 0.6;
 }
-nav ul li:active{
+nav#dashboard-nav ul li:active{
   opacity: 1;
   border-right: 3px solid #83e8a2;
 }
-nav ul li:hover{
+nav#dashboard-nav ul li:hover{
   opacity: 1;
 }
 
-nav ul li#dashboard:before{
+nav#dashboard-nav ul li#dashboard:before{
   background-image: url(./img/Dashboard.svg);
 }
-nav ul li#costs:before{
+nav#dashboard-nav ul li#costs:before{
   background-image: url(./img/Cost.svg);
 }
-nav ul li#applicances:before{
+nav#dashboard-nav ul li#applicances:before{
   background-image: url(./img/Appliances.svg);
 }
-nav ul li#usage_by_rooms:before{
+nav#dashboard-nav ul li#usage_by_rooms:before{
   background-image: url(./img/Usage_by_rooms.svg);
 }
-nav ul li#emissions:before{
+nav#dashboard-nav ul li#emissions:before{
   background-image: url(./img/Emissions.svg);
 }
-nav ul li:before{
+nav#dashboard-nav ul li:before{
   background-repeat: no-repeat;
   background-size: 24px 24px;
   color: white;
@@ -117,7 +124,7 @@ nav ul li:before{
   opacity: .6;
 }
 
-nav ul li a{
+nav#dashboard-nav ul li a{
   margin-bottom: 20px;
 }
 
@@ -183,4 +190,16 @@ g.raphael-group-16-creditgroup {
 //Hide the Fusion Charts tags
 .fusioncharts-container svg g:nth-child(4) {
   display: none;
+}
+
+#log-nav ul{
+  margin: 0;
+  padding: 0;
+} 
+
+#log-body{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: calc(100vh-48px);
 }

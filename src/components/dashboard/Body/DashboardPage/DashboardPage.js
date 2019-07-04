@@ -1,6 +1,6 @@
 import React from "react";
 import Cost from "../../Charts/Cost";
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 import Doughnut2d from "../../Charts/Doughnut2d";
 
 

@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Header from './components/Header/Header';
-import DashboardPage from './components/Body/DashboardPage/DashboardPage';
+import DashboardHeader from './components/dashboard/Header/DashboardHeader';
+import DashboardPage from './components/dashboard/Body/DashboardPage/DashboardPage';
 import { Route, BrowserRouter as Router} from 'react-router-dom';
-import CostsPage from './components/Body/CostsPage/CostsPage';
-import AppliancesPage from './components/Body/AppliancesPage/AppliancesPage';
-import UsagePage from './components/Body/UsagePage/UsagePage';
-import EmissionsPage from './components/Body/EmissionsPage/EmissionsPage';
+import CostsPage from './components/dashboard/Body/CostsPage/CostsPage';
+import AppliancesPage from './components/dashboard/Body/AppliancesPage/AppliancesPage';
+import UsagePage from './components/dashboard/Body/UsagePage/UsagePage';
+import EmissionsPage from './components/dashboard/Body/EmissionsPage/EmissionsPage';
+import LoginPage from './components/LoginLogout/LoginPage';
+import LogoutPage from './components/LoginLogout/LogoutPage';
+import LogHeader from './components/LoginLogout/LogHeader';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   
   const handleLogout= (e) => {
     console.log("Logout button clicked")
@@ -18,9 +21,9 @@ function App() {
   }
   
   useEffect(() => {
-    console.log("Entered useEffect")
-    localStorage.userID = 2;
-    setIsLoggedIn(true);
+    // console.log("Entered useEffect")
+    // localStorage.userID = 2;
+    // setIsLoggedIn(true);
 
   }, [setIsLoggedIn])
 
@@ -29,12 +32,20 @@ function App() {
       // {console.log(isLoggedIn)}
       (!isLoggedIn) ?
       <>
-      <p>You are not logged in.</p>
+      <Router>
+        <div style={{display: "flex", flexDirection: "column"}}>
+          <LogHeader />
+          {/* <p>You are not logged in.</p> */}
+          <Route path="/login" component={LoginPage}/>
+          <Route path="/logout" component={LogoutPage}/>
+        </div>
+      </Router>
+      
       </>
                       :
       <Router>
         <React.Fragment >
-          <Header />
+          <DashboardHeader />
           <div id="logout" style={{float: "right", position: "absolute", right: "30px", top: "15px"}}>
             <button onClick={handleLogout} id="logout">Logout</button> 
           </div>
