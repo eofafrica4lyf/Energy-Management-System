@@ -35,7 +35,6 @@ function App() {
       <Router>
         <div style={{display: "flex", flexDirection: "column"}}>
           <LogHeader />
-          {/* <p>You are not logged in.</p> */}
           <Route exact path="/" component={LoginPage}/>
           <Route path="/login" component={LoginPage}/>
           <Route path="/signup" component={SignUpPage}/>

@@ -15,7 +15,7 @@ function LogHeader() {
         <nav id="log-nav" style={{flex: "1 0 90%"}}>
           <ul style={{display: "flex", justifyContent: "flex-end", paddingRight: "3em"}}>
             <li id="login"><NavLink activeClassName='active' to="/login">Login</NavLink></li>
-            <li id="logout"><NavLink activeClassName='active' to="/logout">Sign Up</NavLink></li>
+            <li id="logout"><NavLink activeClassName='active' to="/signup">Sign Up</NavLink></li>
           </ul>
         </nav>
       </div>

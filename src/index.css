@@ -197,14 +197,14 @@ g.raphael-group-16-creditgroup {
   padding: 0;
 } 
 
-#log-body{
+#log-body, #signup-body{
   display: flex;
   flex-direction: row;
   min-height: calc(100vh - 48px);
   height: auto;
 }
 
-#log-body main{
+#log-body main, #signup-body main{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,7 +213,7 @@ g.raphael-group-16-creditgroup {
   margin-top: 13em;
 }
 
-#login-form{
+#login-form, #signup-form{
   display: flex;
   height: 450px;
   background-color: #ffffff57;
@@ -223,8 +223,15 @@ g.raphael-group-16-creditgroup {
   border-radius: 20px;
 }
 
+#signup-form{
+  width: 500px;
+}
+
 #login-form > div{
   width: 50%;
+}
+
+#login-form > div, #signup-form > div{
   padding: 1em;
   margin: 0 auto;
 }
@@ -255,7 +262,6 @@ form h1 {
 .formgroup input {
   margin: 7px 0 5px 0;
   display: block;
-  /* border: 1px solid white; */
   border: none;
   height: 40px;
   width: 350px;
