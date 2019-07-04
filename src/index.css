@@ -199,7 +199,8 @@ g.raphael-group-16-creditgroup {
 
 #log-body{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  background-color: #17202e;
+  min-height: calc(100vh - 48px);
   height: auto;
-  min-height: calc(100vh-48px);
 }
