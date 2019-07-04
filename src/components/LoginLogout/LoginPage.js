@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 
-function LoginPage() {
+function LoginPage(props) {
   return (
     <div id="log-body">
         <main>
@@ -9,7 +9,7 @@ function LoginPage() {
 
             <div id="user-login">
               <div>
-                <form action="">
+                <form onSubmit={props.handleUserLogin}>
                   <h1>User Login</h1>
                   <div className="formgroup">
                     <label htmlFor="email">Email</label>

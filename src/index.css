@@ -45,6 +45,7 @@ code {
 
 #root{
   /* display: flex; */
+  height: 100vh;
   color: var(--white);
   background: linear-gradient(to bottom left,#216e93,#21648a,#1f5881,#172d5b,#191c51);
   position: relative;
@@ -187,7 +188,7 @@ g.raphael-group-16-creditgroup {
   margin: auto;
 }
 
-//Hide the Fusion Charts tags
+/*Hide the Fusion Charts tags*/
 .fusioncharts-container svg g:nth-child(4) {
   display: none;
 }
@@ -215,7 +216,6 @@ g.raphael-group-16-creditgroup {
 
 #login-form, #signup-form{
   display: flex;
-  height: 450px;
   background-color: #ffffff57;
   box-shadow: 2px 2px 2px 0px #35323247;
   margin: auto;

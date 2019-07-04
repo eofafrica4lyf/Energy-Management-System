@@ -6,7 +6,7 @@ function Header() {
 
   
   return (
-    <div style={{display: 'flex', flexDirection: 'column', flex: '1 0 0', backgroundColor: '#181745', padding: '1em 0 1em 1em'}}>
+    <div style={{display: 'flex', flexDirection: 'column', flex: '1 0 0', backgroundColor: '#181745', padding: '1em 0 1em 1em', height: "100vh"}}>
       <div id='header'>
         <aside style={{flex: '1 0 100vh'}}>
           <div id='logo' style={{fontSize: '27px'}}>
