@@ -7,8 +7,8 @@ function Header() {
     <div id='header' style={{display: 'flex', flexDirection: 'column', flex: '1 0 0', backgroundColor: '#181745', padding: '1em 0 1em 1em'}}>
       <aside style={{flex: '1 0 100vh'}}>
         <div id='logo' style={{fontSize: '27px'}}>
-          SMART ENERGY
-          <span style={{color: '#e6526d', fontFamily: 'Nunito Sans Light, sans-serif', fontWeight:'lighter', fontSize: '15px'}}> BETA</span>
+          ENERGON 
+          <span style={{color: '#e6526d', fontFamily: 'Nunito Sans Light, sans-serif', fontWeight:'lighter', fontSize: '15px'}}>  BETA</span>
 
           <nav>
             <ul>

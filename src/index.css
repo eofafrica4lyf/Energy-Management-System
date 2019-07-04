@@ -77,7 +77,6 @@ nav ul a{
 
 nav ul li{
   position: relative;
-  /* padding-left: 25px; */
   opacity: 0.6;
 }
 nav ul li:active{
@@ -115,11 +114,72 @@ nav ul li:before{
   margin-right: 8px;
   margin-top: 13px;
   opacity: .6;
-  /* position: absolute;
-  top: -9px;
-  left: 0px; */
 }
 
 nav ul li a{
   margin-bottom: 20px;
+}
+
+#header aside{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#dashboard-home{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.text-right{
+  float: right;
+}
+
+.buttonwrapper {
+  list-style: none;
+  padding: 5px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  border-radius: 50px;
+  background-color: hsla(0,0%,100%,.13);
+}
+
+.buttonwrapper li {
+  display: block;
+  float: left;
+  margin-left: 35px;
+  height: 35px;
+  width: 80px;
+}
+
+.buttonwrapper li.active label {
+  background-color: #182142;
+  border-radius: 50px;
+}
+.buttonwrapper label {
+  display: block;
+  color: #fff;
+  /* font-family: Nunito Sans Light; */
+  opacity: 1;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  padding: 8px 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.date-indicator {
+  font-size: 20px;
+}
+
+g.raphael-group-16-creditgroup {
+  display: none;
+}
+
+.chart div{
+  margin: auto;
+}
+
+//Hide the Fusion Charts tags
+.fusioncharts-container svg g:nth-child(4) {
+  display: none;
 }
