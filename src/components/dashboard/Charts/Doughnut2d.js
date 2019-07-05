@@ -64,7 +64,7 @@ function Doughnut2d(props) {
 };
 
   return (
-    <div style={{margin: '1em', flex:"0 0 30%", backgroundColor: background }}>
+    <div style={{margin: '1em', flex:"0 0 30%", backgroundColor: background, borderRadius: "5px" }}>
       <div className='chart' style={{padding: "7px 15px", borderBottom: '1px solid black'}}>
         COST PREDICTED
       </div>

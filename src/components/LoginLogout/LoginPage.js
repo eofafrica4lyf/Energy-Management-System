@@ -1,7 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {Link} from "react-router-dom";
+import {signContext} from '../Helpers'
 
-function LoginPage(props) {
+
+function LoginPage() {
+  const handleUserSignin = useContext(signContext)
+    
   return (
     <div id="log-body">
         <main>
@@ -9,7 +13,7 @@ function LoginPage(props) {
 
             <div id="user-login">
               <div>
-                <form onSubmit={props.handleUserLogin}>
+                <form onSubmit={handleUserSignin}>
                   <h1>User Login</h1>
                   <div className="formgroup">
                     <label htmlFor="email">Email</label>
@@ -20,7 +24,7 @@ function LoginPage(props) {
                     <input type="password" className="password" name="password"/>
                   </div>
                   <div className="formgroup">
-                    <input id="user-login" type="submit" style={{backgroundColor: "#1E2D52", color: "white"}}/>
+                    <input value="Sign Up" id="user-login" type="submit" style={{backgroundColor: "#1E2D52", color: "white"}}/>
                   </div>
                   <Link to="/signup" style={{display: "block", color: "white", margin: "auto", textAlign: "center"}}>Not registered yet? Sign Up</Link>
                 </form>
@@ -39,7 +43,7 @@ function LoginPage(props) {
                     <input type="password" className="password"/>
                   </div>
                   <div className="formgroup">
-                    <input id="admin-login" type="submit" style={{color: "#1E2D52",}}/>
+                    <input value="Sign Up" id="admin-login" type="submit" style={{color: "#1E2D52",}}/>
                   </div>
                 </form>
               </div>

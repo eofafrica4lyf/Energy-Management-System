@@ -23,7 +23,6 @@ function Header() {
               </ul>
             </nav>
             
-            
           </div>
         </aside>
       </div>

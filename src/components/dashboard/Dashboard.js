@@ -1,17 +1,11 @@
 import React from 'react';
-import { Route, BrowserRouter as Router} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
-import DashboardHeader from '../dashboard/Header/DashboardHeader';
-import DashboardPage from './Body/DashboardPage/DashboardPage';
 
-import CostsPage from './Body/CostsPage/CostsPage';
-import AppliancesPage from './Body/AppliancesPage/AppliancesPage';
-import UsagePage from './Body/UsagePage/UsagePage';
-import EmissionsPage from './Body/EmissionsPage/EmissionsPage';
 
 function Dashboard(props) {
   return (
-      <Router>
+
         <div style={{display: "flex"}}>
           <DashboardHeader />
           <div id="logout" style={{float: "right", position: "absolute", right: "30px", top: "15px"}}>
@@ -25,7 +19,7 @@ function Dashboard(props) {
           <Route path='/usage' component={UsagePage}/>
           <Route path='/emissions' component={EmissionsPage}/>
         </div>
-      </Router>
+
   )
 }
 
